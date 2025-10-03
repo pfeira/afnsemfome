@@ -3,132 +3,209 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Infográfico: AFN – Bahia Sem Fome</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <title>Infográfico AFN – Bahia Sem Fome: Do Prato à Inclusão Produtiva</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --cor-primaria: #003366;    /* Azul marinho escuro */
-            --cor-cyan: #00cfff;        /* Cyan, cor de fundo */
-            --cor-texto-escuro: #003366;
-            --cor-texto-claro: #ffffff;
-            --cor-fundo: #f8f9fa;
+            --azul-marinho: #003366;
+            --cyan-bg: #00cfff;
+            --fonte-branca: #ffffff;
         }
-        * { box-sizing: border-box; margin: 0; padding: 0; }
         body {
             font-family: 'Poppins', Arial, sans-serif;
-            background-color: var(--cor-cyan);
-            color: var(--cor-texto-escuro);
-            padding: 2rem 0;
+            background: var(--cyan-bg);
+            color: var(--azul-marinho);
+            padding: 0;
         }
         .container-a4 {
-            width: 100%; max-width: 1123px; min-height: 794px;
-            background: var(--cor-texto-claro); padding: 2.5rem 2rem 0 2rem;
-            border-radius: 8px; box-shadow: 0 10px 30px rgba(0,51,102,0.08);
-            margin: 2rem auto 0 auto;
+            width: 100%; max-width: 1050px; min-height: 794px;
+            background: #fff;
+            border-radius: 10px;
+            margin: 32px auto 0 auto;
+            box-shadow: 0 12px 30px rgba(0,51,102,0.11);
+            padding: 2.4rem 2.1rem 1.5rem 2.1rem;
         }
         .header-titulo {
             display: flex; justify-content: center; align-items: center;
-            gap: 1.5rem; flex-wrap: wrap; margin-bottom: 2rem;
+            gap: 1.4rem; flex-wrap: wrap;
         }
-        .logo-afn { height: 85px; width: auto; }
-        .logo-afnfome { height: 85px; width: auto; }
+        .logo-afn { width: 88px; height: auto; }
+        .logo-afnfome { width: 88px; height: auto; }
         h1 {
-            color: var(--cor-primaria);
+            color: var(--azul-marinho);
             font-size: 2.2rem; font-weight: 700;
             margin: 0; text-align: center;
-            padding: 0.5rem 0 1.2rem 0;
+            padding: 0.5rem 0 1rem 0;
         }
-        .numbers-table {
-            width: 100%;
-            border-collapse: collapse;
-            background: #fff;
-            margin: 0 0 28px 0;
-            color: var(--cor-primaria);
-            box-shadow: 0 2px 10px rgba(0, 51, 102, 0.07);
+        .box-meta {
+            background: var(--azul-marinho);
+            color: var(--fonte-branca);
+            padding: 1rem 2rem 1rem 1.5rem;
+            margin: 18px 0;
+            border-radius: 10px;
+            font-size: 1.12em;
+            font-weight: 600;
+            display: flex; gap: 1.7rem;
+            align-items: center;
+            justify-content: flex-start;
         }
-        .numbers-table th, .numbers-table td {
-            border: 1px solid #00cfff;
-            padding: 12px 15px;
+        .num-meta {
+            font-size: 2.1em;
+            font-weight: 700;
+            min-width: 70px;
+            text-align: center;
+        }
+        .meta-label {
+            font-size: 1em;
+            font-weight: 400;
             text-align: left;
+            line-height: 1.2;
         }
-        .numbers-table th { background: #eafdff; font-weight: bold; font-size: 1.05em; }
-        .numbers-table tr:nth-child(even) { background: #f2fafe; }
-        .cards-grelha {
-            display: flex; flex-wrap: wrap; gap: 1.15rem; justify-content: center; margin: 2rem 0 1.5rem 0;
-        }
-        .cartao {
-            background-color: var(--cor-primaria); color: var(--cor-texto-claro);
-            border-radius: 10px; padding: 1.3rem; text-align: center;
-            flex-basis: 210px; flex-grow: 1;
-            display: flex; flex-direction: column; justify-content: center;
-            box-shadow: 0 4px 12px rgba(0,51,102,0.05);
-        }
-        .cartao .titulo-cartao { font-size: 1.13rem; font-weight: 600; margin-top: 0.5rem; }
-        .cartao .descricao { font-size: 0.97rem; font-weight: 300; }
         .section-title {
-            font-size: 1.35em; font-weight: 600; color: var(--cor-primaria);
-            margin-bottom: 1.1rem; text-align: center;
-            border-bottom: 2px solid var(--cor-cyan);
+            font-size: 1.3em; font-weight: 600; color: var(--azul-marinho);
+            margin-bottom: 1.2rem; text-align: left;
             padding-bottom: 0.35rem; display: inline-block;
         }
-        .texto-principal { font-size: 1.04rem; line-height: 1.7; max-width: 900px; margin: 0 auto 1.1rem auto; text-align: center; }
+        .texto-principal { font-size: 1.07em; line-height: 1.7; margin-bottom: 1.4rem; }
         .footer {
-            width: 100%; background: var(--cor-primaria);
-            padding: 28px 0 16px 0; color: #fff;
-            font-size: 1.16em; text-align: center;
+            width: 100%; background: var(--azul-marinho);
+            padding: 26px 0 16px 0; color: #fff;
+            font-size: 1.14em; text-align: center;
             margin-top: 48px; letter-spacing: 1px;
-            border-top: 4px solid var(--cor-cyan);
         }
-        @media print { .container-a4 { page-break-after: always; } }
+        /* Página 2 */
+        #pagina-2 {
+            display: flex; flex-direction: column; align-items: center; 
+            justify-content: center; height: 100vh;
+            background: var(--azul-marinho);
+        }
+        .biglogo-box {
+            background: #fff;
+            border-radius: 18px;
+            border:4px solid var(--azul-marinho);
+            width:430px; height:540px;
+            display:flex; justify-content:center; align-items:center;
+            margin-top:60px;
+        }
+        .afnfome-big {
+            width:340px; max-width:100%; max-height:420px;
+            display:block;
+        }
     </style>
 </head>
 <body>
 
     <main class="container-a4" id="pagina-1">
-        <div class="header-titulo">
-            <img src="https://user-gen-media-assets.s3.amazonaws.com/seedream_images/9e02a487-cc44-45dd-b230-211458cc6087.png" alt="AFN logo" class="logo-afn">
+        <div class="header-titulo" style="margin-bottom:22px;">
+            <img src="afn.png" alt="AFN logo" class="logo-afn">
             <h1>AFN – Bahia Sem Fome: Do Prato à Inclusão Produtiva</h1>
-            <img src="https://user-gen-media-assets.s3.amazonaws.com/seedream_images/f095cd3e-7062-4fd5-89a9-2da8b2ba17b8.png" alt="Bahia Sem Fome logo" class="logo-afnfome">
+            <img src="afnfome.png" alt="Bahia Sem Fome logo" class="logo-afnfome">
         </div>
-        <table class="numbers-table">
-            <tr><th>Número</th><th>Descrição</th></tr>
-            <tr><td>800</td><td>Famílias atendidas por ano</td></tr>
-            <tr><td>3.200</td><td>Pessoas beneficiadas diretamente</td></tr>
-            <tr><td>72.000</td><td>Refeições distribuídas</td></tr>
-            <tr><td>80%</td><td>Participação dos beneficiários em mini cursos</td></tr>
-            <tr><td>70%</td><td>Jovens e mulheres participantes</td></tr>
-            <tr><td>55%</td><td>Recursos aplicados em alimentos da agricultura familiar</td></tr>
-            <tr><td>100%</td><td>Equipe capacitada</td></tr>
-            <tr><td>15%</td><td>Redução esperada da insegurança alimentar</td></tr>
-            <tr><td>12%</td><td>Aumento da empregabilidade/renda</td></tr>
-            <tr><td>120</td><td>Oficinas e mini cursos realizados</td></tr>
-            <tr><td>10</td><td>Relatórios/boletins divulgados</td></tr>
-            <tr><td>90%</td><td>Presença nas reuniões de avaliação</td></tr>
-        </table>
-        <div class="section-title">Diagnóstico e Justificativa Social</div>
+
+        <!-- Blocos de Metas em Box Azul Marinho -->
+        <div class="box-meta"><span class="num-meta">800</span> <span class="meta-label">Famílias atendidas por ano</span></div>
+        <div class="box-meta"><span class="num-meta">3.200</span> <span class="meta-label">Pessoas beneficiadas diretamente</span></div>
+        <div class="box-meta"><span class="num-meta">72.000</span> <span class="meta-label">Refeições distribuídas</span></div>
+        <div class="box-meta"><span class="num-meta">80%</span> <span class="meta-label">Beneficiários capacitados em mini cursos</span></div>
+        <div class="box-meta"><span class="num-meta">70%</span> <span class="meta-label">Jovens e mulheres participantes</span></div>
+        <div class="box-meta"><span class="num-meta">55%</span> <span class="meta-label">Recursos aplicados em alimentos da agricultura familiar</span></div>
+        <div class="box-meta"><span class="num-meta">100%</span> <span class="meta-label">Equipe capacitada</span></div>
+        <div class="box-meta"><span class="num-meta">15%</span> <span class="meta-label">Redução da insegurança alimentar</span></div>
+        <div class="box-meta"><span class="num-meta">12%</span> <span class="meta-label">Aumento da empregabilidade/renda</span></div>
+        <div class="box-meta"><span class="num-meta">120</span> <span class="meta-label">Oficinas e mini cursos realizados</span></div>
+        <div class="box-meta"><span class="num-meta">10</span> <span class="meta-label">Relatórios/boletins divulgados</span></div>
+        <div class="box-meta"><span class="num-meta">90%</span> <span class="meta-label">Presença nas reuniões de avaliação</span></div>
+
+        <!-- Texto completo do projeto -->
+        <div class="section-title">Identificação da Proponente</div>
         <div class="texto-principal">
-            Jardim Santo Inácio e Calabetão concentram elevados índices de desemprego e insegurança alimentar grave. O público-alvo são jovens, mulheres, adultos e crianças em extrema vulnerabilidade, cujas famílias enfrentam fome diária e falta de oportunidades produtivas e educacionais. Nossa atuação visa reverter esse quadro via alimentação saudável, capacitação e acesso à cidadania.
+            <strong>Nome:</strong> Associação Futuro da Nação<br>
+            <strong>CNPJ:</strong> 32.930.262/0001-41<br>
+            <strong>Data de Criação:</strong> 03/12/2018<br>
+            <strong>Endereço:</strong> Rua Villa Lobos, nº1 – 1º andar, Jardim Santo Inácio, Salvador, BA<br>
+            <strong>Telefone:</strong> (71) 3213-0599<br>
+            <strong>E-mail:</strong> <a href="mailto:associacaofuturodanac20@gmail.com">associacaofuturodanac20@gmail.com</a><br>
+            <strong>Representante Legal:</strong> Ana Lúcia Melo de Souza<br>
+            <strong>RG:</strong> 04.047.682-02 SSPBA<br>
+            <strong>CPF:</strong> 770.603.775-49
         </div>
-        <div class="section-title">Metodologia e Ações</div>
+
+        <div class="section-title">Apresentação da OSC – Histórico e Objetivos</div>
         <div class="texto-principal">
-            O projeto articula 4 cozinhas comunitárias, formação produtiva e oficinas cidadãs. São ações de busca ativa de beneficiários, parcerias locais para mini cursos (culinária, tecnologia, cidadania), acompanhamento pedagógico e social, divulgação contínua e monitoramento dos resultados.
+            A Associação Futuro da Nação atua há mais de sete anos na promoção de inclusão social, redução de vulnerabilidades e formação profissional de jovens e mulheres em Salvador e região metropolitana, especialmente nos bairros Jardim Santo Inácio e Calabetão. Desenvolve projetos de cidadania, cultura e capacitação, conectados com os Objetivos de Desenvolvimento Sustentável (ODS).<br><br>
+            <strong>Objetivos institucionais:</strong><br>
+            Reduzir a fome, o desemprego e a violência por meio da atuação social integrada.<br>
+            Promover assistência social e alimentar, formando jovens e adultos.<br>
+            Incentivar práticas sustentáveis, educação e inclusão produtiva.
         </div>
-        <div class="section-title">Capacidade Técnica e Resultados Esperados</div>
+
+        <div class="section-title">Diagnóstico Social</div>
         <div class="texto-principal">
-            AFN dispõe de equipe experiente, rede de parceiros e estrutura física adequada. Espera-se: redução da fome, geração de renda e empregabilidade, elevação da escolarização, protagonismo juvenil, participação comunitária e diminuição da violência local.
+            Jardim Santo Inácio e Calabetão apresentam índices elevados de desemprego, insegurança alimentar grave e violência urbana. A população jovem e feminina é a mais atingida, vivendo o cotidiano da fome, da ausência do trabalho formal e das oportunidades. Nesses territórios, garantir comida é promover dignidade e combater os fatores que mantêm o ciclo da pobreza e exclusão social.
         </div>
+
+        <div class="section-title">Objeto da Parceria</div>
+        <div class="texto-principal">
+            Gestão de cozinhas comunitárias em bairros vulneráveis de Salvador, oferecendo alimentação regular e gratuita aliada a mini cursos de qualificação e oficinas de cidadania, dentro das diretrizes do Bahia Sem Fome e Programa Comida no Prato.
+        </div>
+
+        <div class="section-title">Objetivo da Parceria</div>
+        <div class="texto-principal">
+            Reduzir os índices de insegurança alimentar, desemprego e violência juvenil nos bairros Jardim Santo Inácio e Calabetão, promovendo:<br>
+            Alimentação saudável a 800 famílias/ano (3.200 pessoas).<br>
+            Capacitação social-profissional para 80% dos beneficiários.<br>
+            Engajamento de jovens e mulheres, elevando suas chances de inserção produtiva e cidadania.
+        </div>
+
+        <div class="section-title">Descrição das Ações e Metas</div>
+        <div class="texto-principal">
+            Oferecer 72.000 refeições em 12 meses (mínimo 200/dia, 3x/semana por ponto).<br>
+            Capacitar 80% dos atendidos em mini cursos de culinária, tecnologia, cidadania, design digital.<br>
+            Efetivar parcerias com CRAS, CREAS e CadÚnico para busca ativa e acompanhamento.<br>
+            Aplicar 55% dos recursos na compra de alimentos da agricultura familiar.<br>
+            Promover 10 oficinas mensais de capacitação em trabalho decente, empreendedorismo e direitos humanos.<br>
+            Garantir 100% da equipe técnica formada e treinada antes do início das operações.<br>
+            Realizar reuniões e relatórios mensais com fotos, dados e escuta dos participantes.
+        </div>
+
+        <div class="section-title">Indicadores e Resultados Esperados</div>
+        <div class="texto-principal">
+            <strong>Famílias atendidas:</strong> 800<br>
+            <strong>Pessoas beneficiadas:</strong> 3.200<br>
+            <strong>Refeições distribuídas:</strong> 72.000<br>
+            <strong>Beneficiários capacitados (mini cursos):</strong> 80%<br>
+            <strong>Jovens e mulheres participantes:</strong> 70%<br>
+            <strong>Recursos aplicados em alimentos:</strong> 55%<br>
+            <strong>Equipe capacitada:</strong> 100%<br>
+            <strong>Redução da insegurança alimentar:</strong> 15%<br>
+            <strong>Aumento da empregabilidade:</strong> 12%<br>
+            <strong>Relatórios/boletins divulgados:</strong> 10<br>
+            <strong>Presença em reuniões de avaliação:</strong> 90%
+        </div>
+
+        <div class="section-title">Metodologia</div>
+        <div class="texto-principal">
+            O projeto adota planejamento participativo, integração das ações alimentares e pedagógicas, parcerias com entidades sociais locais e sistema de monitoramento regular dos resultados. Cada beneficiário é acompanhado por equipe técnica e social, estimulando a participação em todas etapas e garantindo a proximidade dos resultados esperados.
+        </div>
+
+        <div class="section-title">Justificativa e Embasamento Técnico</div>
+        <div class="texto-principal">
+            A fome, a violência e o desemprego só serão superados se forem enfrentados juntos: servir refeições é apenas o começo. O impacto social será multiplicado ao integrar capacitação profissional, oficinas e orientação cidadã, criando oportunidades reais de inclusão produtiva para jovens e mulheres, favorecendo o empreendedorismo e rompendo o ciclo da exclusão.
+        </div>
+        
+        <div class="section-title">Capacidade Técnica e Sustentabilidade</div>
+        <div class="texto-principal">
+            A AFN possui quadro técnico formado e qualificado, experiência comprovada em projetos de inclusão social e alimentar, rede local de parceiros, estrutura física adequada e domínio das metodologias de busca ativa, alimentação saudável e capacitação social-profissional.
+        </div>
+
         <div class="footer">
             Associação Futuro da Nação – CNPJ: 32.930.262/0001-41
         </div>
     </main>
-
-    <main class="container-a4" id="pagina-2" style="display:flex;justify-content:center;align-items:center;background: #003366;">
-        <div style="width:100%;display:flex;justify-content:center;align-items:center;">
-            <div style="background:#fff; border-radius:18px; border:4px solid #003366; width:420px; height:500px; display:flex;justify-content:center;align-items:center;">
-                <img src="https://user-gen-media-assets.s3.amazonaws.com/seedream_images/f095cd3e-7062-4fd5-89a9-2da8b2ba17b8.png" alt="Bahia Sem Fome Grande" style="max-width:330px;max-height:350px;">
-            </div>
+    <!-- Página 2 -->
+    <main id="pagina-2">
+        <div class="biglogo-box">
+            <img src="afnfome.png" class="afnfome-big" alt="Bahia Sem Fome Grande"/>
         </div>
     </main>
 </body>
