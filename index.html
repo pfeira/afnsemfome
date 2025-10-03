@@ -1,197 +1,135 @@
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <title>AFN – Bahia Sem Fome: Do Prato à Inclusão Produtiva</title>
-  <style>
-    body {
-      margin: 0;
-      background-color: #00cfff; /* azul cyan */
-      font-family: Arial, sans-serif;
-    }
-    .header {
-      display: flex;
-      align-items: center;
-      background-color: #00cfff;
-      padding-top: 32px;
-      padding-bottom: 12px;
-      justify-content: space-between;
-    }
-    .logo-left, .logo-right {
-      width: 105px;
-      height: auto;
-      background: #fff;
-      border-radius: 12px;
-      box-shadow: 0 2px 10px rgba(0,51,102,0.09);
-      margin: 0 32px;
-      padding: 12px;
-      border: 2px solid #003366;
-      object-fit: contain;
-    }
-    .header-center {
-      flex: 1;
-      text-align: center;
-      color: #003366;
-      font-size: 2em;
-      font-weight: bold;
-      letter-spacing: 2px;
-    }
-    .box {
-      background: #fff;
-      border-radius: 12px;
-      padding: 36px 24px 28px 24px;
-      margin: 32px auto 0 auto;
-      max-width: 900px;
-      box-shadow: 0 2px 16px rgba(0, 51, 102, 0.10);
-      border: 2px solid #003366;
-      color: #003366;
-      position: relative;
-    }
-    h1 {
-      color: #003366;
-      margin-bottom: 12px;
-      text-align: center;
-      letter-spacing: 1px;
-      font-size: 1.9em;
-    }
-    .numbers-table {
-      width: 100%;
-      border-collapse: collapse;
-      background: #fff;
-      margin: 20px auto 32px auto;
-      color: #003366;
-      font-size: 1.1em;
-    }
-    .numbers-table th, .numbers-table td {
-      border: 1px solid #00cfff;
-      padding: 12px 18px;
-      text-align: left;
-    }
-    .numbers-table th {
-      background: #eafdff;
-      font-weight: bold;
-    }
-    .section-title {
-      font-size: 1.3em;
-      margin: 28px 0 14px 0;
-      color: #003366;
-      font-weight: bold;
-      border-bottom: 2px solid #003366;
-      padding-bottom: 7px;
-      letter-spacing: 0.5px;
-    }
-    .data-table {
-      width: 100%;
-      border-collapse: collapse;
-      background: #fff;
-      margin: 14px 0;
-      color: #003366;
-    }
-    .data-table th, .data-table td {
-      border: 1px solid #00cfff;
-      padding: 10px;
-      text-align: left;
-    }
-    .data-table th {
-      background-color: #eafdff;
-      font-weight: bold;
-    }
-    .biglogo-box {
-      background: #fff;
-      border: 2px solid #003366;
-      border-radius: 16px;
-      width: 100%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      padding: 80px 0;
-      margin: 0;
-      height: 680px;
-    }
-    .afnfome-big {
-      width: 370px;
-      height: auto;
-      display: block;
-      margin: 0 auto;
-    }
-    .page {
-      page-break-after: always;
-    }
-    .footer {
-      width: 100%;
-      background: #003366;
-      padding: 24px 0 14px 0;
-      color: #fff;
-      font-size: 1.13em;
-      text-align: center;
-      position: relative;
-      margin-top: 48px;
-      letter-spacing: 1px;
-      border-top: 4px solid #00cfff;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infográfico: AFN – Bahia Sem Fome</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --cor-primaria: #003366;    /* Azul marinho escuro */
+            --cor-cyan: #00cfff;        /* Cyan, cor de fundo */
+            --cor-texto-escuro: #003366;
+            --cor-texto-claro: #ffffff;
+            --cor-fundo: #f8f9fa;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: 'Poppins', Arial, sans-serif;
+            background-color: var(--cor-cyan);
+            color: var(--cor-texto-escuro);
+            padding: 2rem 0;
+        }
+        .container-a4 {
+            width: 100%; max-width: 1123px; min-height: 794px;
+            background: var(--cor-texto-claro); padding: 2.5rem 2rem 0 2rem;
+            border-radius: 8px; box-shadow: 0 10px 30px rgba(0,51,102,0.08);
+            margin: 2rem auto 0 auto;
+        }
+        .header-titulo {
+            display: flex; justify-content: center; align-items: center;
+            gap: 1.5rem; flex-wrap: wrap; margin-bottom: 2rem;
+        }
+        .logo-afn { height: 85px; width: auto; }
+        .logo-afnfome { height: 85px; width: auto; }
+        h1 {
+            color: var(--cor-primaria);
+            font-size: 2.2rem; font-weight: 700;
+            margin: 0; text-align: center;
+            padding: 0.5rem 0 1.2rem 0;
+        }
+        .numbers-table {
+            width: 100%;
+            border-collapse: collapse;
+            background: #fff;
+            margin: 0 0 28px 0;
+            color: var(--cor-primaria);
+            box-shadow: 0 2px 10px rgba(0, 51, 102, 0.07);
+        }
+        .numbers-table th, .numbers-table td {
+            border: 1px solid #00cfff;
+            padding: 12px 15px;
+            text-align: left;
+        }
+        .numbers-table th { background: #eafdff; font-weight: bold; font-size: 1.05em; }
+        .numbers-table tr:nth-child(even) { background: #f2fafe; }
+        .cards-grelha {
+            display: flex; flex-wrap: wrap; gap: 1.15rem; justify-content: center; margin: 2rem 0 1.5rem 0;
+        }
+        .cartao {
+            background-color: var(--cor-primaria); color: var(--cor-texto-claro);
+            border-radius: 10px; padding: 1.3rem; text-align: center;
+            flex-basis: 210px; flex-grow: 1;
+            display: flex; flex-direction: column; justify-content: center;
+            box-shadow: 0 4px 12px rgba(0,51,102,0.05);
+        }
+        .cartao .titulo-cartao { font-size: 1.13rem; font-weight: 600; margin-top: 0.5rem; }
+        .cartao .descricao { font-size: 0.97rem; font-weight: 300; }
+        .section-title {
+            font-size: 1.35em; font-weight: 600; color: var(--cor-primaria);
+            margin-bottom: 1.1rem; text-align: center;
+            border-bottom: 2px solid var(--cor-cyan);
+            padding-bottom: 0.35rem; display: inline-block;
+        }
+        .texto-principal { font-size: 1.04rem; line-height: 1.7; max-width: 900px; margin: 0 auto 1.1rem auto; text-align: center; }
+        .footer {
+            width: 100%; background: var(--cor-primaria);
+            padding: 28px 0 16px 0; color: #fff;
+            font-size: 1.16em; text-align: center;
+            margin-top: 48px; letter-spacing: 1px;
+            border-top: 4px solid var(--cor-cyan);
+        }
+        @media print { .container-a4 { page-break-after: always; } }
+    </style>
 </head>
-
 <body>
 
-<!-- Página 1 – Projeto -->
-<div class="header">
-  <img src="https://user-gen-media-assets.s3.amazonaws.com/seedream_images/9e02a487-cc44-45dd-b230-211458cc6087.png" class="logo-left" alt="Logomarca AFN"/>
-  <div class="header-center">
-    Associação Futuro da Nação
-  </div>
-  <img src="https://user-gen-media-assets.s3.amazonaws.com/seedream_images/f095cd3e-7062-4fd5-89a9-2da8b2ba17b8.png" class="logo-right" alt="Bahia Sem Fome"/>
-</div>
+    <main class="container-a4" id="pagina-1">
+        <div class="header-titulo">
+            <img src="https://user-gen-media-assets.s3.amazonaws.com/seedream_images/9e02a487-cc44-45dd-b230-211458cc6087.png" alt="AFN logo" class="logo-afn">
+            <h1>AFN – Bahia Sem Fome: Do Prato à Inclusão Produtiva</h1>
+            <img src="https://user-gen-media-assets.s3.amazonaws.com/seedream_images/f095cd3e-7062-4fd5-89a9-2da8b2ba17b8.png" alt="Bahia Sem Fome logo" class="logo-afnfome">
+        </div>
+        <table class="numbers-table">
+            <tr><th>Número</th><th>Descrição</th></tr>
+            <tr><td>800</td><td>Famílias atendidas por ano</td></tr>
+            <tr><td>3.200</td><td>Pessoas beneficiadas diretamente</td></tr>
+            <tr><td>72.000</td><td>Refeições distribuídas</td></tr>
+            <tr><td>80%</td><td>Participação dos beneficiários em mini cursos</td></tr>
+            <tr><td>70%</td><td>Jovens e mulheres participantes</td></tr>
+            <tr><td>55%</td><td>Recursos aplicados em alimentos da agricultura familiar</td></tr>
+            <tr><td>100%</td><td>Equipe capacitada</td></tr>
+            <tr><td>15%</td><td>Redução esperada da insegurança alimentar</td></tr>
+            <tr><td>12%</td><td>Aumento da empregabilidade/renda</td></tr>
+            <tr><td>120</td><td>Oficinas e mini cursos realizados</td></tr>
+            <tr><td>10</td><td>Relatórios/boletins divulgados</td></tr>
+            <tr><td>90%</td><td>Presença nas reuniões de avaliação</td></tr>
+        </table>
+        <div class="section-title">Diagnóstico e Justificativa Social</div>
+        <div class="texto-principal">
+            Jardim Santo Inácio e Calabetão concentram elevados índices de desemprego e insegurança alimentar grave. O público-alvo são jovens, mulheres, adultos e crianças em extrema vulnerabilidade, cujas famílias enfrentam fome diária e falta de oportunidades produtivas e educacionais. Nossa atuação visa reverter esse quadro via alimentação saudável, capacitação e acesso à cidadania.
+        </div>
+        <div class="section-title">Metodologia e Ações</div>
+        <div class="texto-principal">
+            O projeto articula 4 cozinhas comunitárias, formação produtiva e oficinas cidadãs. São ações de busca ativa de beneficiários, parcerias locais para mini cursos (culinária, tecnologia, cidadania), acompanhamento pedagógico e social, divulgação contínua e monitoramento dos resultados.
+        </div>
+        <div class="section-title">Capacidade Técnica e Resultados Esperados</div>
+        <div class="texto-principal">
+            AFN dispõe de equipe experiente, rede de parceiros e estrutura física adequada. Espera-se: redução da fome, geração de renda e empregabilidade, elevação da escolarização, protagonismo juvenil, participação comunitária e diminuição da violência local.
+        </div>
+        <div class="footer">
+            Associação Futuro da Nação – CNPJ: 32.930.262/0001-41
+        </div>
+    </main>
 
-<div class="box">
-  <h1>AFN – Bahia Sem Fome: Do Prato à Inclusão Produtiva</h1>
-  <table class="numbers-table">
-    <tr><th>Número</th><th>Descrição</th></tr>
-    <tr><td>800</td><td>Famílias atendidas por ano</td></tr>
-    <tr><td>3.200</td><td>Pessoas beneficiadas diretamente</td></tr>
-    <tr><td>72.000</td><td>Refeições distribuídas por ano (200/dia, 3x/semana)</td></tr>
-    <tr><td>80%</td><td>Beneficiários capacitados em mini cursos</td></tr>
-    <tr><td>70%</td><td>Jovens e mulheres participantes</td></tr>
-    <tr><td>55%</td><td>Recursos aplicados em alimentos da agricultura familiar</td></tr>
-    <tr><td>100%</td><td>Equipe capacitada antes do início</td></tr>
-    <tr><td>15%</td><td>Redução esperada da insegurança alimentar</td></tr>
-    <tr><td>12%</td><td>Aumento estimado na empregabilidade/renda</td></tr>
-    <tr><td>120</td><td>Oficinas e mini cursos realizados</td></tr>
-    <tr><td>10</td><td>Relatórios/boletins divulgados</td></tr>
-    <tr><td>90%</td><td>Presença nas reuniões mensais de avaliação</td></tr>
-  </table>
-
-  <div class="section-title">Diagnóstico Social e Justificativa Técnica</div>
-  <p>
-    Jardim Santo Inácio e Calabetão concentram altos índices de desemprego (25%), insegurança alimentar grave e violência urbana. 25% das famílias enfrentam fome extrema, metade das crianças depende da merenda escolar para alimentar-se. Na ausência de alimento e trabalho, cresce o ciclo de exclusão social e violência. O público-alvo do projeto são jovens, mulheres, adultos e crianças em situação de extrema pobreza e risco social.
-  </p>
-
-  <div class="section-title">Metodologia Integrada</div>
-  <p>
-    O projeto articula alimentação saudável via quatro cozinhas comunitárias, formação produtiva e oficinas cidadãs. As ações envolvem busca ativa de beneficiários, parceria com CRAS, escolas e associações locais, oferta de mini cursos, monitoramento social e integração ao mercado e redes solidárias.
-  </p>
-
-  <div class="section-title">Principais Ações</div>
-  <p>
-    Implantação de 4 cozinhas comunitárias; Busca ativa; Mini cursos mensais (culinária, informática, design digital, reciclagem, audiovisual, cidadania); Criação da Rede Jovem Monitor; Acompanhamento pedagógico/social; Divulgação em mídias locais e boletins digitais.
-  </p>
-
-  <div class="section-title">Capacidade Técnica & Resultados Esperados</div>
-  <p>
-    A AFN possui equipe multidisciplinar experiente em inclusão social e alimentar, estrutura física adequada e rede de parceiros. Espera-se: redução da fome, geração de renda, aumento da escolarização, participação social, protagonismo juvenil e diminuição da violência.
-  </p>
-</div>
-
-<div class="footer">
-  Associação Futuro da Nação – CNPJ: 32.930.262/0001-41
-</div>
-
-<!-- Página 2 – Logomarca Grande -->
-<div class="page"></div>
-<div style="background: #003366; min-height:100vh; display:flex; justify-content:center; align-items:center;">
-  <div class="biglogo-box">
-    <img src="https://user-gen-media-assets.s3.amazonaws.com/seedream_images/f095cd3e-7062-4fd5-89a9-2da8b2ba17b8.png" class="afnfome-big" alt="Logo Bahia Sem Fome"/>
-  </div>
-</div>
+    <main class="container-a4" id="pagina-2" style="display:flex;justify-content:center;align-items:center;background: #003366;">
+        <div style="width:100%;display:flex;justify-content:center;align-items:center;">
+            <div style="background:#fff; border-radius:18px; border:4px solid #003366; width:420px; height:500px; display:flex;justify-content:center;align-items:center;">
+                <img src="https://user-gen-media-assets.s3.amazonaws.com/seedream_images/f095cd3e-7062-4fd5-89a9-2da8b2ba17b8.png" alt="Bahia Sem Fome Grande" style="max-width:330px;max-height:350px;">
+            </div>
+        </div>
+    </main>
 </body>
 </html>
