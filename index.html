@@ -13,54 +13,78 @@
       display: flex;
       align-items: center;
       background-color: #00cfff;
-      padding: 24px 0 0 0;
+      padding-top: 32px;
+      padding-bottom: 12px;
+      justify-content: space-between;
     }
-    .logo-afn {
-      width: 100px;
-      margin-left: 32px;
+    .logo-left, .logo-right {
+      width: 105px;
+      height: auto;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 2px 10px rgba(0,51,102,0.09);
+      margin: 0 32px;
+      padding: 12px;
+      border: 2px solid #003366;
+      object-fit: contain;
     }
     .header-center {
-      margin: 0 auto;
-      text-align: center;
       flex: 1;
+      text-align: center;
       color: #003366;
       font-size: 2em;
       font-weight: bold;
       letter-spacing: 2px;
     }
-    .logo-afnfome {
-      width: 100px;
-      margin-right: 32px;
-    }
     .box {
       background: #fff;
       border-radius: 12px;
-      padding: 32px 24px 24px 24px;
-      margin: 32px auto;
+      padding: 36px 24px 28px 24px;
+      margin: 32px auto 0 auto;
       max-width: 900px;
-      box-shadow: 0 2px 16px rgba(0, 51, 102, 0.1);
+      box-shadow: 0 2px 16px rgba(0, 51, 102, 0.10);
       border: 2px solid #003366;
       color: #003366;
+      position: relative;
     }
     h1 {
       color: #003366;
-      margin-bottom: 0;
+      margin-bottom: 12px;
       text-align: center;
       letter-spacing: 1px;
+      font-size: 1.9em;
+    }
+    .numbers-table {
+      width: 100%;
+      border-collapse: collapse;
+      background: #fff;
+      margin: 20px auto 32px auto;
+      color: #003366;
+      font-size: 1.1em;
+    }
+    .numbers-table th, .numbers-table td {
+      border: 1px solid #00cfff;
+      padding: 12px 18px;
+      text-align: left;
+    }
+    .numbers-table th {
+      background: #eafdff;
+      font-weight: bold;
     }
     .section-title {
       font-size: 1.3em;
-      margin: 32px 0 12px 0;
+      margin: 28px 0 14px 0;
       color: #003366;
       font-weight: bold;
       border-bottom: 2px solid #003366;
-      padding-bottom: 6px;
+      padding-bottom: 7px;
+      letter-spacing: 0.5px;
     }
     .data-table {
       width: 100%;
       border-collapse: collapse;
       background: #fff;
-      margin: 24px 0;
+      margin: 14px 0;
       color: #003366;
     }
     .data-table th, .data-table td {
@@ -85,13 +109,25 @@
       height: 680px;
     }
     .afnfome-big {
-      width: 350px;
+      width: 370px;
       height: auto;
       display: block;
       margin: 0 auto;
     }
     .page {
       page-break-after: always;
+    }
+    .footer {
+      width: 100%;
+      background: #003366;
+      padding: 24px 0 14px 0;
+      color: #fff;
+      font-size: 1.13em;
+      text-align: center;
+      position: relative;
+      margin-top: 48px;
+      letter-spacing: 1px;
+      border-top: 4px solid #00cfff;
     }
   </style>
 </head>
@@ -100,15 +136,30 @@
 
 <!-- Página 1 – Projeto -->
 <div class="header">
-  <img src="https://user-gen-media-assets.s3.amazonaws.com/seedream_images/9e02a487-cc44-45dd-b230-211458cc6087.png" class="logo-afn" alt="Logomarca AFN"/>
+  <img src="https://user-gen-media-assets.s3.amazonaws.com/seedream_images/9e02a487-cc44-45dd-b230-211458cc6087.png" class="logo-left" alt="Logomarca AFN"/>
   <div class="header-center">
     Associação Futuro da Nação
   </div>
-  <img src="https://user-gen-media-assets.s3.amazonaws.com/seedream_images/f095cd3e-7062-4fd5-89a9-2da8b2ba17b8.png" class="logo-afnfome" alt="Bahia Sem Fome"/>
+  <img src="https://user-gen-media-assets.s3.amazonaws.com/seedream_images/f095cd3e-7062-4fd5-89a9-2da8b2ba17b8.png" class="logo-right" alt="Bahia Sem Fome"/>
 </div>
 
 <div class="box">
   <h1>AFN – Bahia Sem Fome: Do Prato à Inclusão Produtiva</h1>
+  <table class="numbers-table">
+    <tr><th>Número</th><th>Descrição</th></tr>
+    <tr><td>800</td><td>Famílias atendidas por ano</td></tr>
+    <tr><td>3.200</td><td>Pessoas beneficiadas diretamente</td></tr>
+    <tr><td>72.000</td><td>Refeições distribuídas por ano (200/dia, 3x/semana)</td></tr>
+    <tr><td>80%</td><td>Beneficiários capacitados em mini cursos</td></tr>
+    <tr><td>70%</td><td>Jovens e mulheres participantes</td></tr>
+    <tr><td>55%</td><td>Recursos aplicados em alimentos da agricultura familiar</td></tr>
+    <tr><td>100%</td><td>Equipe capacitada antes do início</td></tr>
+    <tr><td>15%</td><td>Redução esperada da insegurança alimentar</td></tr>
+    <tr><td>12%</td><td>Aumento estimado na empregabilidade/renda</td></tr>
+    <tr><td>120</td><td>Oficinas e mini cursos realizados</td></tr>
+    <tr><td>10</td><td>Relatórios/boletins divulgados</td></tr>
+    <tr><td>90%</td><td>Presença nas reuniões mensais de avaliação</td></tr>
+  </table>
 
   <div class="section-title">Diagnóstico Social e Justificativa Técnica</div>
   <p>
@@ -122,46 +173,22 @@
 
   <div class="section-title">Principais Ações</div>
   <p>
-    – Implantação de 4 cozinhas comunitárias, servindo <b>72.000 refeições/ano</b>.<br>
-    – Busca ativa de famílias pelo CRAS/CREAS/CadÚnico.<br>
-    – <b>12 ciclos de mini cursos</b> anuais: culinária, informática, design digital, reciclagem, audiovisual, direitos humanos, cidadania.<br>
-    – Criação da Rede Jovem Monitor: protagonismo juvenil com participantes multiplicadores.<br>
-    – Acompanhamento pedagógico e social, integração escola/bairro/família.<br>
-    – Divulgação em mídias locais, boletins mensais digitais, encontros comunitários.
+    Implantação de 4 cozinhas comunitárias; Busca ativa; Mini cursos mensais (culinária, informática, design digital, reciclagem, audiovisual, cidadania); Criação da Rede Jovem Monitor; Acompanhamento pedagógico/social; Divulgação em mídias locais e boletins digitais.
   </p>
-
-  <div class="section-title">Metas e Indicadores (Anual)</div>
-  <table class="data-table">
-    <tr>
-      <th>Indicador</th>
-      <th>Meta</th>
-    </tr>
-    <tr><td>Famílias atendidas</td><td>800</td></tr>
-    <tr><td>Pessoas beneficiadas</td><td>3.200</td></tr>
-    <tr><td>Refeições distribuídas</td><td>72.000</td></tr>
-    <tr><td>Beneficiários em mini cursos</td><td>80%</td></tr>
-    <tr><td>Jovens e mulheres participantes</td><td>70%</td></tr>
-    <tr><td>Recursos aplicados em alimentos (agricultura familiar)</td><td>55%</td></tr>
-    <tr><td>Equipe capacitada</td><td>100%</td></tr>
-    <tr><td>Redução da insegurança alimentar</td><td>15%</td></tr>
-    <tr><td>Aumento empregabilidade/renda</td><td>12%</td></tr>
-    <tr><td>Oficinas realizadas</td><td>120</td></tr>
-    <tr><td>Relatórios/boletins divulgados</td><td>10</td></tr>
-    <tr><td>Presença em reuniões de avaliação</td><td>90%</td></tr>
-  </table>
 
   <div class="section-title">Capacidade Técnica & Resultados Esperados</div>
   <p>
-      A AFN possui equipe multidisciplinar (pedagogos, agente social, nutricionista, instrutores de cursos, cozinheiros/as, assistente administrativo) experiente em inclusão social e alimentar. Estrutura física adequada, rede de parceiros, trajetória reconhecida, garantindo execução plena.
-      <br><br>
-      Espera-se redução significativa da fome, geração de emprego/renda, aumento da escolarização, participação social, protagonismo juvenil e diminuição da violência local.
+    A AFN possui equipe multidisciplinar experiente em inclusão social e alimentar, estrutura física adequada e rede de parceiros. Espera-se: redução da fome, geração de renda, aumento da escolarização, participação social, protagonismo juvenil e diminuição da violência.
   </p>
 </div>
 
+<div class="footer">
+  Associação Futuro da Nação – CNPJ: 32.930.262/0001-41
+</div>
 
 <!-- Página 2 – Logomarca Grande -->
 <div class="page"></div>
-<div style="background: #003366; height:100vh; display:flex; justify-content:center; align-items:center;">
+<div style="background: #003366; min-height:100vh; display:flex; justify-content:center; align-items:center;">
   <div class="biglogo-box">
     <img src="https://user-gen-media-assets.s3.amazonaws.com/seedream_images/f095cd3e-7062-4fd5-89a9-2da8b2ba17b8.png" class="afnfome-big" alt="Logo Bahia Sem Fome"/>
   </div>
